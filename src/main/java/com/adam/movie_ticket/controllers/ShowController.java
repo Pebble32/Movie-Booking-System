@@ -1,6 +1,7 @@
 package com.adam.movie_ticket.controllers;
 
 import com.adam.movie_ticket.controllers.dtos.ShowRequest;
+import com.adam.movie_ticket.controllers.dtos.ShowSeatRequest;
 import com.adam.movie_ticket.services.ShowService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,13 @@ public class ShowController {
             @RequestBody @Valid ShowRequest showRequest
     ) {
         return ResponseEntity.ok(showService.addNewShow(showRequest));
+    }
+
+    @PostMapping("/associateSeats")
+    public ResponseEntity<Integer> associateSeats(
+            @RequestBody @Valid ShowSeatRequest showSeatRequest
+    ) {
+        return ResponseEntity.ok(showService.associateShowSeats(showSeatRequest));
     }
 
 }

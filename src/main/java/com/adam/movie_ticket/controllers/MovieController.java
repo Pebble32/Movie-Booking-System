@@ -1,7 +1,6 @@
 package com.adam.movie_ticket.controllers;
 
 import com.adam.movie_ticket.controllers.dtos.MovieRequest;
-import com.adam.movie_ticket.repositories.MovieRepository;
 import com.adam.movie_ticket.services.MovieService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

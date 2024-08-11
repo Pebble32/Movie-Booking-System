@@ -5,7 +5,6 @@ import com.adam.movie_ticket.enums.Language;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -37,5 +36,5 @@ public class MovieEntity {
     private Language language;
 
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
-    private List<ShowEntity> shows = new ArrayList<>();
+    private List<ShowEntity> shows;
 }
