@@ -10,7 +10,6 @@ import com.adam.movie_ticket.repositories.entities.*;
 import com.adam.movie_ticket.services.converters.ShowConverter;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
