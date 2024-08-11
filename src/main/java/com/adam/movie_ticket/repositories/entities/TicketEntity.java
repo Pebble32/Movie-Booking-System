@@ -19,7 +19,7 @@ public class TicketEntity {
     private Integer id;
 
     private Integer totalPrice;
-    private String seatNumber;
+    private String bookedSeats;
 
     @CreationTimestamp
     private Date createdAt;

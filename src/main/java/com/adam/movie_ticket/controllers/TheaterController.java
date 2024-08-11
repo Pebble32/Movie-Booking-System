@@ -1,7 +1,7 @@
 package com.adam.movie_ticket.controllers;
 
 import com.adam.movie_ticket.controllers.dtos.TheaterRequest;
-import com.adam.movie_ticket.repositories.TheaterRepository;
+import com.adam.movie_ticket.controllers.dtos.TheaterSeatRequest;
 import com.adam.movie_ticket.services.TheaterService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -23,6 +23,13 @@ public class TheaterController {
             @RequestBody @Valid TheaterRequest theaterRequest
     ) {
         return ResponseEntity.ok(theaterService.addNewTheater(theaterRequest));
+    }
+
+    @PostMapping("/addTheaterSeats")
+    public ResponseEntity<Integer> addTheaterSeats(
+            @RequestBody @Valid TheaterSeatRequest theaterSeatRequest
+    ) {
+        return ResponseEntity.ok(theaterService.addTheaterSeats(theaterSeatRequest));
     }
 
 }
