@@ -28,6 +28,7 @@ public class MovieEntity {
 
     @Column(scale = 2)
     private Integer rating;
+    @Column(nullable = false)
     private Date releaseDate;
 
     @Enumerated(value = EnumType.STRING)

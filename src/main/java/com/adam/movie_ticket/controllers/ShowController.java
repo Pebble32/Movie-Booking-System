@@ -1,8 +1,7 @@
 package com.adam.movie_ticket.controllers;
 
-import com.adam.movie_ticket.controllers.dtos.MovieRequest;
-import com.adam.movie_ticket.repositories.MovieRepository;
-import com.adam.movie_ticket.services.MovieService;
+import com.adam.movie_ticket.controllers.dtos.ShowRequest;
+import com.adam.movie_ticket.services.ShowService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,18 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/movie")
-public class MovieController {
+@RequestMapping("/show")
+public class ShowController {
 
-    private final MovieService movieService;
-
+    private final ShowService showService;
 
     @PostMapping("/addNew")
-    public ResponseEntity<Integer> addNewMovie(
-            @RequestBody @Valid MovieRequest movieRequest
+    public ResponseEntity<Integer> addShow(
+            @RequestBody @Valid ShowRequest showRequest
     ) {
-        return ResponseEntity.ok(movieService.addNewMovie(movieRequest));
+        return ResponseEntity.ok(showService.addNewShow(showRequest));
     }
-
 
 }
