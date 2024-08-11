@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/movie")
 public class MovieController {
 
-    private final MovieRepository movieRepository;
+    private MovieRepository movieRepository;
 
     @PostMapping("/addNew")
     public ResponseEntity<String> addNewMovie(@RequestBody MovieRequest movieRequest) {
-
+        return null;
     }
 }

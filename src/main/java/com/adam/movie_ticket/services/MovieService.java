@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 public class MovieService {
 
     public String addNewMovie(MovieRequest movieRequest) {
-
+        return null;
     }
 }
