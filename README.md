@@ -26,7 +26,7 @@ The system facilitates ticket booking for users, allowing them to select a show,
 
 The system includes basic user management functionality, allowing for the registration of new users. Each user can book tickets for shows, and their booking history is maintained within the system. This functionality ensures that users have personalized access to the system and can manage their bookings efficiently.
 
-### 6. Security
+### 6. Security [TODO]
 
 Security is handled using JWT-based authentication, ensuring that only authorized users can perform certain actions within the system. This includes access control over the management features for movies, shows, and theaters, which are typically restricted to administrators.
 
